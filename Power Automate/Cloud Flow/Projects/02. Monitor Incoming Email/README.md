@@ -27,7 +27,7 @@ This automation helps streamline the processing of daily report emails without m
 ## Flow Diagram
 >Below is a visual of the flow steps in Power Automate
 
-[Process-Flow](images/01_Power-Automate-Flow.png)
+![Process-Flow](images/01_Power-Automate-Flow.png)
 
 ---
 
@@ -79,13 +79,13 @@ This automation helps streamline the processing of daily report emails without m
 
 ## Sample Input Email
 
-[Input](images/02_Power-Automate-Flow_Output.png)
+![Input](images/02_Power-Automate-Flow_Output.png)
 
 ---
 
 ## Sample Output
 
-[Output](images/03_Power-Automate-Flow_InputEmail.png)
+![Output](images/03_Power-Automate-Flow_InputEmail.png)
 
 ---
 
