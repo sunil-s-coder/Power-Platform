@@ -67,7 +67,7 @@ This flow is scheduled to run **every day at 10:00 AM IST**. It performs the fol
 
 ## Sample Excel file
 
-![Flow Screenshot](supporting%20files/Customer%20Details.xlsx)
+[View Excel File](supporting%20files/Customer%20Details.xlsx)
 
 ---
 
