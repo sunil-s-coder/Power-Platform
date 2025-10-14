@@ -79,13 +79,13 @@ This automation helps streamline the processing of daily report emails without m
 
 ## Sample Input Email
 
-![Input](images/02_Power-Automate-Flow_Output.png)
+![Input](images/03_Power-Automate-Flow_InputEmail.png)
 
 ---
 
 ## Sample Output
 
-![Output](images/03_Power-Automate-Flow_InputEmail.png)
+![Output](images/02_Power-Automate-Flow_Output.png)
 
 ---
 
