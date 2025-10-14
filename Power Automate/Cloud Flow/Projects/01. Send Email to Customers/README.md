@@ -25,7 +25,7 @@ This flow is scheduled to run **every day at 10:00 AM IST**. It performs the fol
 ## Flow Diagram
 > Below is a visual of the flow steps in Power Automate
 
-![Flow Screenshot](images/01. Code.png)
+![Flow Screenshot](images/01.%20Code.png)
 
 ---
 
@@ -67,7 +67,7 @@ This flow is scheduled to run **every day at 10:00 AM IST**. It performs the fol
 
 ## Sample Excel file
 
-![Flow Screenshot](supporting files/Customer Details.xlsx)
+![Flow Screenshot](supporting%20files/Customer%20Details.xlsx)
 
 ---
 
