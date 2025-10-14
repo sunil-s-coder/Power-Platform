@@ -42,6 +42,7 @@ This flow is scheduled to run **every day at 10:00 AM IST**. It performs the fol
 |---------------------|--------------------------------------------|
 | `flow-package/`     | Contains the exported flow as a .zip file  |
 | `images/`           | Screenshots of the flow for visual reference |
+| `supporting files/` | Contains supporting file(.xlsx)            |
 | `README.md`         | Project overview and documentation         |
 
 ---
