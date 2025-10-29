@@ -16,7 +16,7 @@ The flow runs automatically when a new email arrives in a specified Outlook fold
 
 ## Connectors Used
 
-- [HTTP Connector](https://learn.microsoft.com/en-us/connectors/custom-connectors/overview)  
+- [HTTP Connector](https://learn.microsoft.com/en-us/training/modules/http-connectors)  
 
 ---
 
