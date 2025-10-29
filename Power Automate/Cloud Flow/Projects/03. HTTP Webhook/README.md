@@ -74,7 +74,7 @@ The flow runs automatically when a new email arrives in a specified Outlook fold
 - **03. Webhook Callback Output:**  
 ![Webhook Callback Output](images/05.%20Webhook%20Callback%20Output%20Image.png)
 
-- **04. Webhook Unsubscription:**  
+- **04. Webhook Unsubscription:**
 ![Webhook Unsubscription](images/03.%20Webhook%20Unsubscription%20Image.png)
 
 ---
