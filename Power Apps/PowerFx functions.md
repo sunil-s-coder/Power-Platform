@@ -194,20 +194,19 @@
 
 ### 1. Functions
 
-| Function           | Short Definition |
-|-------------------|------------------|
-| IsBlank()          | Returns true if a value is blank |
-| IsError()          | Returns true if a value or formula results in an error |
-| IfError()          | Executes a formula and provides a fallback if it fails |
-| IsBlankOrError()   | Returns true if a value is blank or results in an error |
-| FirstError         | Returns information about the first error at the app level |
-| Error()            | Creates a custom error in the app |
-| App.OnError        | App-level property to handle runtime errors |
+## 13. Error Handling Functions
+
+| Function        | Short Definition |
+|-----------------|------------------|
+| IsBlank()       | Returns true if a value is blank |
+| IsError()       | Returns true if a value or formula results in an error |
+| IfError()       | Executes a formula and provides a fallback if it fails |
+| IsBlankOrError()| Returns true if a value is blank or results in an error |
+| FirstError      | Returns information about the first error at the app level |
+| Error()         | Creates a custom error in the app |
+| App.OnError     | App-level property to handle runtime errors |
+| AllErrors       | Returns a table of all errors captured at the app level |
 
 ### 2. Live Monitoring
 - Use **App.OnError** to monitor and handle errors during app execution.
 - Provides global error handling without interrupting app flow.
-
-### 3. AllErrors
-- Returns a **table of all errors** captured at the app level.
-- Useful for debugging multiple errors and logging.
