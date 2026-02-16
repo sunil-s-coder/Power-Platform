@@ -4,6 +4,7 @@
 
 | Function          | Short Definition |
 |-------------------|------------------|
+| Table()           | Creates an in-memory table from explicitly provided records |
 | Collect()         | Adds one or more records to a collection |
 | Clear()           | Removes all records from a collection |
 | ClearCollect()    | Clears a collection and loads new records |
@@ -25,29 +26,35 @@
 | Sort()            | Sorts records by a single column |
 | SortByColumns()   | Sorts records using column names as text |
 | LookUp()          | Finds a single record matching a condition |
-| Concat()          | Joins text from a column across all records into a single string |
+| Concat()          | Concatenates text from a column across all records into a single string |
+| Sequence()        | Generates a single-column table of sequential numbers |
+| Distinct()        | Extract a unique list of values from a single column of a table or collection |
+| Search()          | Finds the position of a substring within text or columns |
+| Index()
 
 ---
 
 ## 2. Aggregate, Behavior & Scalar Functions
 
-| Function      | Category   | Short Definition |
-|---------------|------------|------------------|
-| Max()         | Aggregate  | Returns the highest value from a table or list |
-| Min()         | Aggregate  | Returns the lowest value from a table or list |
-| Sum()         | Aggregate  | Returns the total of numeric values |
-| Average()     | Aggregate  | Returns the mean of numeric values |
-| Round()       | Scalar     | Rounds a number to a specified number of decimal places |
-| RoundDown()   | Scalar     | Rounds a number down to the specified decimal places |
-| RoundUp()     | Scalar     | Rounds a number up to the specified decimal places |
-| Abs()         | Scalar     | Returns the absolute (non-negative) value |
-| Sqrt()        | Scalar     | Returns the square root of a number |
-| Power()       | Scalar     | Raises a number to a specified power |
-| Log()         | Scalar     | Returns the natural logarithm of a number |
-| Exp()         | Scalar     | Returns *e* raised to the power of a number |
-| Trunc()       | Scalar     | Removes the decimal portion of a number |
-| Mod()         | Scalar     | Returns the remainder after division |
-| Value()       | Scalar     | Converts text to a number |
+| Function       | Category   | Short Definition |
+|----------------|------------|------------------|
+| Max()          | Aggregate  | Returns the highest value from a table or list |
+| Min()          | Aggregate  | Returns the lowest value from a table or list |
+| Sum()          | Aggregate  | Returns the total of numeric values |
+| Average()      | Aggregate  | Returns the mean of numeric values |
+| Round()        | Scalar     | Rounds a number to a specified number of decimal places |
+| RoundDown()    | Scalar     | Rounds a number down to the specified decimal places |
+| RoundUp()      | Scalar     | Rounds a number up to the specified decimal places |
+| Abs()          | Scalar     | Returns the absolute (non-negative) value |
+| Sqrt()         | Scalar     | Returns the square root of a number |
+| Power()        | Scalar     | Raises a number to a specified power |
+| Log()          | Scalar     | Returns the natural logarithm of a number |
+| Exp()          | Scalar     | Returns *e* raised to the power of a number |
+| Trunc()        | Scalar     | Removes the decimal portion of a number |
+| Mod()          | Scalar     | Returns the remainder after division |
+| Value()        | Scalar     | Converts text to a numeric value |
+| Rand()         | Scalar     | Returns a random decimal number between 0 and 1 |
+| RandBetween()  | Scalar     | Returns a random whole number between two specified values |
 
 ---
 
@@ -67,6 +74,7 @@
 | IsMatch()       | Checks if text matches a pattern using a regular expression |
 | IsBlankOrError()| Returns true if a value is blank or contains an error |
 | IsToday()       | Checks if a date value is today |
+| Not()           | Negates the boolean value |
 
 ---
 
@@ -95,17 +103,18 @@
 | Function        | Short Definition |
 |-----------------|------------------|
 | Text()          | Converts and formats values as text |
-| Concatenate()   | Joins multiple text values |
+| Concatenate()   | Joins multiple text values into a single text string |
 | Upper()         | Converts text to uppercase |
 | Lower()         | Converts text to lowercase |
-| Left()          | Returns characters from the start of a text |
-| Right()         | Returns characters from the end of a text |
-| Mid()           | Returns a substring from specified position |
-| Len()           | Returns the number of characters in text |
-| Substitute()    | Replaces occurrences of text |
-| Trim()          | Removes leading and trailing spaces |
-| Search()        | Finds text within one or more columns |
-| TextPosition()  | Returns the position of a substring in text |
+| Left()          | Returns characters from the start of a text value |
+| Right()         | Returns characters from the end of a text value |
+| Mid()           | Returns a substring from a specified position |
+| Len()           | Returns the number of characters in a text value |
+| Substitute()    | Replaces all occurrences of a substring with new text |
+| Replace()       | Replaces characters in a text string at a specified position |
+| Trim()          | Removes leading and trailing spaces from text |
+| TextPosition()  | Returns the position of a substring in a text value |
+| MatchAll()      | Returns all matches of a regular expression in a text string |
 
 ---
 
@@ -129,19 +138,20 @@
 
 ## 8. Form & Control-Specific Functions
 
-| Function        | Scope        | Short Definition |
-|-----------------|--------------|------------------|
-| SubmitForm()    | Form-only    | Submits changes from a form to the data source |
-| ResetForm()     | Form-only    | Resets a form to its initial state |
-| NewForm()       | Form-only    | Switches a form to new record mode |
-| EditForm()      | Form-only    | Switches a form to edit existing record mode |
-| ViewForm()      | Form-only    | Switches a form to read-only mode |
-| Validate()      | Form-only    | Validates form input based on data source rules |
-| FormMode()      | Form-only    | Returns the current mode of a form |
-| Defaults()      | Data source  | Returns the default record for a data source |
-| DataSourceInfo()| Data source  | Returns metadata about a data source |
-| Reset()         | Control-only | Resets a control to its default value |
-| Select()        | Control-only | Programmatically triggers the OnSelect action of a control |
+| Function        | Scope         | Short Definition |
+|-----------------|---------------|------------------|
+| SubmitForm()    | Form-only     | Submits changes from a form to the data source |
+| ResetForm()     | Form-only     | Resets a form to its initial state |
+| NewForm()       | Form-only     | Switches a form to new record mode |
+| EditForm()      | Form-only     | Switches a form to edit existing record mode |
+| ViewForm()      | Form-only     | Switches a form to read-only mode |
+| Validate()      | Form-only     | Validates form input based on data source rules |
+| FormMode()      | Form-only     | Returns the current mode of a form |
+| Defaults()      | Data source   | Returns the default record for a data source |
+| DataSourceInfo()| Data source   | Returns metadata about a data source |
+| Refresh()       | Data source   | Refreshes data from the connected data source |
+| Reset()         | Control-only  | Resets a control to its default value |
+| Select()        | Control-only  | Programmatically triggers the OnSelect action of a control |
 
 ---
 
@@ -154,6 +164,7 @@
 | Exit()     | Closes the app |
 | Launch()   | Opens a URL or external application |
 | Notify()  | Displays a notification message |
+| Copy()
 
 ---
 
@@ -189,24 +200,24 @@
 | ColorValue()  | Converts a text string to a color value |
 | ColorFade()   | Returns a lighter or darker version of a color |
 
-
 ## 13. Error Handling Functions
 
-### 1. Functions
-
-## 13. Error Handling Functions
-
-| Function        | Short Definition |
-|-----------------|------------------|
-| IsBlank()       | Returns true if a value is blank |
-| IsError()       | Returns true if a value or formula results in an error |
-| IfError()       | Executes a formula and provides a fallback if it fails |
-| IsBlankOrError()| Returns true if a value is blank or results in an error |
-| FirstError      | Returns information about the first error at the app level |
-| Error()         | Creates a custom error in the app |
-| App.OnError     | App-level property to handle runtime errors |
-| AllErrors       | Returns a table of all errors captured at the app level |
+| Function / Property | Short Definition |
+|--------------------|------------------|
+| IsBlank()          | Returns true if a value is blank |
+| IsError()          | Returns true if a value or formula results in an error |
+| IfError()          | Executes a formula and provides a fallback value if it fails |
+| IsBlankOrError()   | Returns true if a value is blank or results in an error |
+| Trace()            | Logs diagnostic information for monitoring and debugging |
+| Error()            | Creates and raises a custom error in the app |
+| FirstError         | Returns information about the first error captured at the app level |
+| AllErrors          | Returns a table of all errors captured at the app level |
+| App.OnError        | App-level property that runs when a runtime error occurs |
 
 ### 2. Live Monitoring
 - Use **App.OnError** to monitor and handle errors during app execution.
 - Provides global error handling without interrupting app flow.
+
+
+
+
