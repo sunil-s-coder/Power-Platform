@@ -21,6 +21,7 @@
 | FirstN()          | Returns the first N records |
 | Last()            | Returns the last record of a table |
 | LastN()           | Returns the last N records |
+| Index()           | Finds a record in a collection basis a index/row number |
 | CountRows()       | Returns the total number of records |
 | Filter()          | Returns records that match a condition |
 | Sort()            | Sorts records by a single column |
@@ -30,7 +31,10 @@
 | Sequence()        | Generates a single-column table of sequential numbers |
 | Distinct()        | Extract a unique list of values from a single column of a table or collection |
 | Search()          | Finds the position of a substring within text or columns |
-| Index()
+| SaveData()        | Saves a collection locally on the device for offline use. |
+| LoadData()        | Loads previously saved local data into a collection. |
+| Shuffle()         | Randomly rearranges the order of records in a table. |
+| Relate()          | Creates a relationship between records in related Dataverse tables. |
 
 ---
 
@@ -164,7 +168,6 @@
 | Exit()     | Closes the app |
 | Launch()   | Opens a URL or external application |
 | Notify()  | Displays a notification message |
-| Copy()
 
 ---
 
@@ -191,6 +194,8 @@
 | Code()         | Converts a character to its ASCII number |
 | Language()     | Returns the language tag for the current locale |
 
+---
+
 ## 12. Color Functions
 
 | Function      | Short Definition |
@@ -199,6 +204,8 @@
 | RGB()         | Creates a color from Red, Green, and Blue values (fully opaque) |
 | ColorValue()  | Converts a text string to a color value |
 | ColorFade()   | Returns a lighter or darker version of a color |
+
+---
 
 ## 13. Error Handling Functions
 
@@ -213,6 +220,20 @@
 | FirstError         | Returns information about the first error captured at the app level |
 | AllErrors          | Returns a table of all errors captured at the app level |
 | App.OnError        | App-level property that runs when a runtime error occurs |
+
+---
+
+## 13. Data Source Functions
+
+| Function / Property | Short Definition |
+|--------------------|------------------|
+| Refresh()         | Refreshes a data source by retrieving the latest data from the server. |
+| Copy()            | Copies data from variable to Clipboard |
+| Download()        | Downloads file from given input URL |
+| Print()           | Prints the current screen or generates a printable version of the app content. |
+| Confirm()         | Displays a confirmation dialog and returns true if the user confirms, otherwise false. |
+
+---
 
 ### 2. Live Monitoring
 - Use **App.OnError** to monitor and handle errors during app execution.
